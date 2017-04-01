@@ -2,8 +2,8 @@
   <div class="container-wrap">
     <div class="container-row">
       <h2 class="container-title">ブログ</h2>
-      <div class="archives">
-        <div class="archive" v-for="(post, index) in posts" :key="post.id" v-if="index < 6" >
+      <div class="archives" v-loading.body="loading">
+        <div class="archive" v-for="(post, index) in posts" :key="post.id" v-if="index < 6"  >
           <a :href="post.link" target="_blank">
             <el-card :body-style="{ padding: '0px' }">
               <img :src="post._embedded['wp:featuredmedia'][0].media_details.sizes['medium'].source_url" class="image">
@@ -25,7 +25,7 @@ export default {
   data () {
     return {
       posts: [],
-      loading: true
+      loading: false
     }
   },
   created: function () {
@@ -33,9 +33,11 @@ export default {
   },
   methods: {
     getPosts: function () {
+      this.loading = true
       var app = this
       axios.get('https://www.sho-yamane.me/wp-json/wp/v2/posts?_embed&filter[posts_per_page]=1')
       .then(function (response) {
+        app.loading = false
         app.posts = response.data
       })
       .catch(function (error) {

@@ -50,18 +50,6 @@ export default {
         background-repeat: no-repeat;
         background-position: center center;
       }
-      &:nth-of-type(3) {
-        background-image: url("~assets/images/2.jpg");
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-position: center center;
-      }
-      &:nth-of-type(4) {
-        background-image: url("~assets/images/4.jpg");
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-position: center center;
-      }
     }
   }
 }
