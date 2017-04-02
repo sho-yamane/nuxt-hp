@@ -1,6 +1,5 @@
 <template>
   <div class="contact">
-    <Header />
     <main class="main">
       <PageTitle v-bind:pageTitle="enTitle" v-bind:subTitle="jpTitle" />
       <div class="container-wrap">
@@ -9,15 +8,11 @@
         </div>
       </div>
     </main>
-    <Footer />
   </div>
 </template>
 
 
 <script>
-import Logo from '~components/Logo.vue'
-import Header from '~components/Header.vue'
-import Footer from '~components/Footer.vue'
 import PageTitle from '~components/PageTitle.vue'
 
 export default {
@@ -28,9 +23,6 @@ export default {
     }
   },
   components: {
-    Logo,
-    Header,
-    Footer,
     PageTitle
   },
   head () {
@@ -40,6 +32,10 @@ export default {
         { hid: 'description', name: 'description', content: 'My custom description' }
       ]
     }
+  },
+  transition (to, from) {
+    if (!from) return 'slide-left'
+    return +to.query.page < +from.query.page ? 'slide-right' : 'slide-left'
   }
 }
 </script>

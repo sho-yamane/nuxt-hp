@@ -1,8 +1,26 @@
 <template>
   <div id="page">
+    <Header />
     <nuxt/>
+    <Footer />
   </div>
 </template>
+
+<script>
+import Header from '~components/Header.vue'
+import Footer from '~components/Footer.vue'
+
+export default {
+  data () {
+    return {
+    }
+  },
+  components: {
+    Header,
+    Footer
+  }
+}
+</script>
 
 <style src="element-ui/lib/theme-default/index.css"></style>
 <style lang="scss">
@@ -59,4 +77,22 @@ html
     padding: 60px 0;
   }
 }
+
+.slide-left-enter-active, .slide-left-leave-active {
+  transition: all .4s ease-in-out;
+}
+.slide-left-enter, .slide-left-leave-to {
+  transform: translateY(50px);
+  opacity: 0;
+}
+
+.slide-right-enter-active, .slide-right-leave-active {
+  transition: all .4s ease-in-out;
+}
+
+.slide-right-enter, .slide-right-leave-to /* .fade-leave-active in <2.1.8 */ {
+  transform: translateY(50px);
+  opacity: 0;
+}
+
 </style>

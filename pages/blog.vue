@@ -2,7 +2,9 @@
   <div class="contact">
     <main class="main">
       <PageTitle v-bind:pageTitle="enTitle" v-bind:subTitle="jpTitle" />
-      <ContactForm />
+        <div class="container-row">
+          <Archives />
+        </div>
     </main>
   </div>
 </template>
@@ -10,18 +12,18 @@
 
 <script>
 import PageTitle from '~components/PageTitle.vue'
-import ContactForm from '~components/ContactForm.vue'
+import Archives from '~components/Archives.vue'
 
 export default {
   data () {
     return {
-      jpTitle: 'お問い合わせ',
-      enTitle: 'Contact'
+      jpTitle: 'ブログ',
+      enTitle: 'Blog'
     }
   },
   components: {
     PageTitle,
-    ContactForm
+    Archives
   },
   head () {
     return {
@@ -76,5 +78,14 @@ export default {
 .links
 {
   padding-top: 15px;
+}
+p {
+  margin: 0 0 20px;
+}
+ul {
+  margin-bottom: 20px;
+  li {
+
+  }
 }
 </style>

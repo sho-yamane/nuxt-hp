@@ -1,8 +1,8 @@
-# nuxt-sample
+# nuxt-hp
 
-> Nuxt.js test2
+Vue.js + Nuxt.js + Elementで作成したホームページのサンプルです。
 
-## Build Setup
+## セッティング方法
 
 ``` bash
 # install dependencies
@@ -18,5 +18,3 @@ $ npm start
 # generate static project
 $ npm run generate
 ```
-
-For detailed explanation on how things work, checkout the [Nuxt.js docs](https://github.com/nuxt/nuxt.js).

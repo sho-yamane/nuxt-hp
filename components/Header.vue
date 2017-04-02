@@ -8,12 +8,8 @@
           </h1>
           <el-menu theme="dark" :default-active="activeIndex" class="el-menu-demo" mode="horizontal" @select="handleSelect">
             <el-menu-item index="1"><nuxt-link to="/about">このサイトについて</nuxt-link></el-menu-item>
-            <el-submenu index="2">
-              <template slot="title"><nuxt-link to="/works">事業概要</nuxt-link></template>
-              <el-menu-item index="2-1">サービス</el-menu-item>
-              <el-menu-item index="2-2">事例</el-menu-item>
-            </el-submenu>
-            <el-menu-item index="3"><a href="https://www.sho-yamane.me">ブログ</a></el-menu-item>
+            <el-menu-item index="2"><nuxt-link to="/blog">ブログ</nuxt-link></el-menu-item>
+            <el-menu-item index="3"><nuxt-link to="/privacy-policy">プライバシーポリシー</nuxt-link></el-menu-item>
             <el-menu-item index="4"><nuxt-link to="/contact">お問い合わせ</nuxt-link></el-menu-item>
           </el-menu>
         </el-col>
@@ -73,6 +69,9 @@ header.main-header {
         a {
           color: #bfcbd9;
           text-decoration: none;
+          line-height: 60px;
+          height: 60px;
+          display: block;
         }
       }
     }

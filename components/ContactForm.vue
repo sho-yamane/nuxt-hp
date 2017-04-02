@@ -8,8 +8,8 @@
           </el-form-item>
           <el-form-item label="件名">
             <el-select v-model="form.region" placeholder="選択して下さい。">
-              <el-option label="Zone one" value="お仕事の依頼"></el-option>
-              <el-option label="Zone one" value="その他依頼"></el-option>
+              <el-option label="お仕事の依頼" value="お仕事の依頼"></el-option>
+              <el-option label="その他依頼" value="その他依頼"></el-option>
             </el-select>
           </el-form-item>
           <el-form-item label="ご連絡可能時間">

@@ -4,7 +4,6 @@
     <main class="main">
       <Slider />
       <Service />
-      <Archives />
     </main>
     <Footer />
   </div>
@@ -12,12 +11,8 @@
 
 
 <script>
-import Logo from '~components/Logo.vue'
-import Header from '~components/Header.vue'
 import Slider from '~components/Slider.vue'
 import Service from '~components/Service.vue'
-import Footer from '~components/Footer.vue'
-import Archives from '~components/Archives.vue'
 
 export default {
   data () {
@@ -26,17 +21,17 @@ export default {
     }
   },
   components: {
-    Logo,
-    Header,
     Slider,
-    Service,
-    Footer,
-    Archives
+    Service
   },
   methods: {
     next () {
       if (this.active++ > 2) this.active = 0
     }
+  },
+  transition (to, from) {
+    if (!from) return 'slide-left'
+    return +to.query.page < +from.query.page ? 'slide-right' : 'slide-left'
   }
 }
 </script>

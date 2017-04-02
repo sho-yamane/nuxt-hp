@@ -39,16 +39,16 @@ export default {
         text-align: center;
       }
       &:nth-of-type(1) {
-        background-image: url("~assets/images/3.jpg");
+        /*background-image: url("~assets/images/1.jpg");
         background-size: cover;
         background-repeat: no-repeat;
-        background-position: center center;
+        background-position: center center;*/
       }
       &:nth-of-type(2) {
-        background-image: url("~assets/images/1.jpg");
+        /*background-image: url("~assets/images/2.jpg");
         background-size: cover;
         background-repeat: no-repeat;
-        background-position: center center;
+        background-position: center center;*/
       }
     }
   }

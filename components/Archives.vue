@@ -1,7 +1,6 @@
 <template>
   <div class="container-wrap">
     <div class="container-row">
-      <h2 class="container-title">ブログ</h2>
       <div class="archives" v-loading.body="loading">
         <div class="archive" v-for="(post, index) in posts" :key="post.id" v-if="index < 6"  >
           <a :href="post.link" target="_blank">
@@ -106,7 +105,5 @@ h2.container-title {
     }
   }
 }
-
-
 
 </style>
