@@ -1,6 +1,7 @@
 # nuxt-hp
 
 Vue.js + Nuxt.js + Elementで作成したホームページのサンプルです。
+サンプルデモは<a href="http://vue.sho-yamane.info/" target="_blank">こちら</a>です。
 
 ## セッティング方法
 
